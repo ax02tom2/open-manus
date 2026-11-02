@@ -1,7 +1,4 @@
 streamlit
+google-generativeai
 pandas
 plotly
-playwright
-pydantic>=2.0.0
-tomli
-python-docx
