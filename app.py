@@ -48,8 +48,8 @@ if prompt := st.chat_input("隨便問吧！不管是查天氣、寫程式、或�
         with st.chat_message("assistant"):
             with st.spinner("🧠 AI 正在思考中..."):
                 try:
-                    # 使用更新後的標準最新版本模型名稱
-                    model = genai.GenerativeModel('gemini-1.5-flash-latest')
+                    # 使用官方指定的最新標準型號 gemini-3.8-flash
+                    model = genai.GenerativeModel('gemini-3.8-flash')
                     response = model.generate_content(prompt)
                     
                     reply = response.text
