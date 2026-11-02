@@ -9,7 +9,6 @@ st.write("這是一套專屬於你的萬用 AI 助理。不管是查資料、寫
 # 側邊欄：API 金鑰設定與檔案上傳
 with st.sidebar:
     st.header("🔑 系統設定")
-    # 如果你在 Streamlit 雲端有設定 Secrets，它會自動抓取；否則可以在這裡手動輸入
     api_key_input = st.text_input("請輸入你的 Google Gemini API 金鑰 (AQ開頭)", type="password")
     
     if api_key_input:
@@ -49,8 +48,8 @@ if prompt := st.chat_input("隨便問吧！不管是查天氣、寫程式、或�
         with st.chat_message("assistant"):
             with st.spinner("🧠 AI 正在思考中..."):
                 try:
-                    # 使用目前 Google 支援的標準智慧模型
-                    model = genai.GenerativeModel('gemini-1.5-flash')
+                    # 使用更新後的標準最新版本模型名稱
+                    model = genai.GenerativeModel('gemini-1.5-flash-latest')
                     response = model.generate_content(prompt)
                     
                     reply = response.text
